@@ -19,6 +19,7 @@ steps:
     npm install
     npm install -g ts-node
     npm install --save-dev mocha
+    npm install --save-dev chai
     npm run build
   
 - task: PublishTestResults@2
