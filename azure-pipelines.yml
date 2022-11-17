@@ -21,6 +21,7 @@ steps:
     npm install --save-dev mocha
     npm install --save-dev chai
     npm run build
+    npm run test
   
 - task: PublishTestResults@2
   inputs:
