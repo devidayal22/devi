@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "type": "module"
   },
   "repository": {
-    "type": "git",
+   
+    "type": "module",
     "url": "git+https://github.com/devidayal22/devi.git"
   },
   "keywords": [],
