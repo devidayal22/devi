@@ -1,8 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.addition = void 0;
-// src/calculator.ts
-function addition(a, b) {
-    return a + b;
+const add = (a, b) => a + b
+const subtract = (a, b) => a - b
+const multiply = (a, b) => a * b
+const divide = (a, b) => b !== 0 ? (a / b) : undefined
+
+module.exports = {
+    add,
+    subtract,
+    multiply,
+    divide,
 }
-exports.addition = addition;
