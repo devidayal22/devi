@@ -19,7 +19,8 @@ steps:
 - script: |
      npm install
      npm run build
-     npx mocha --reporter xunit --reporter-option output=report.xml
+     npm run test
+     mocha tests --recursive --reporter my-file-reporter --reporter-options mochaFile=./Test.txt
   displayName: 'npm install and build'
 - task: PublishTestResults@2
   inputs:
