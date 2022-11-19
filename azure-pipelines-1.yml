@@ -20,12 +20,12 @@ steps:
      npm install
      npm run build
      npm run test
-     mocha tests --recursive --reporter my-file-reporter --reporter-options mochaFile=./report.xml
+     mocha test --recursive --reporter my-file-reporter --reporter-options mochaFile=./test.xml
   displayName: 'npm install and build'
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit' # Options JUnit, NUnit, VSTest, xUnit, cTest
-    testResultsFiles: '**/Report/*.xml'
+    testResultsFiles: '**/Test/*.xml'
     searchFolder: '$(System.DefaultWorkingDirectory)'
     
     
