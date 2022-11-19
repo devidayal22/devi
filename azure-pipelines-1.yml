@@ -24,5 +24,10 @@ steps:
   displayName: 'npm install and build'
 - task: PublishTestResults@2
   inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/Test*.xml'
+    testResultsFormat: 'JUnit' # Options JUnit, NUnit, VSTest, xUnit, cTest
+    testResultsFiles: '**/*Report.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    mergeTestResults: false
+    testRunTitle: Checkov Scan
+    failTaskOnFailedTests: false
+    publishRunAttachments: true
