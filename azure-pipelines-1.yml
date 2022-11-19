@@ -25,9 +25,10 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit' # Options JUnit, NUnit, VSTest, xUnit, cTest
-    testResultsFiles: '**/*Report.xml'
+    testResultsFiles: '**/Report/*.xml'
     searchFolder: '$(System.DefaultWorkingDirectory)'
     mergeTestResults: false
-    testRunTitle: Checkov Scan
+    testRunTitle: CheckovScan
     failTaskOnFailedTests: false
     publishRunAttachments: true
+    
