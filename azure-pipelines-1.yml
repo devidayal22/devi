@@ -18,13 +18,10 @@ steps:
 
 - script: |
      npm install
-     npm install -g ts-node
-     npm install --save-dev mocha
-     npm install --save-dev chai
      npm run build
-     npm run test
+     npx mocha --reporter xunit --reporter-option output=report.xml
   displayName: 'npm install and build'
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/Report-*.xml'
+    testResultsFiles: '**/*.xml'
