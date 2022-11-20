@@ -2,7 +2,7 @@
 <testsuites>
 <testsuite name="test-1">
 <properties>
-<property name="specid" value="0">
+<property name="specid" value="0"/>
 </properties>
 </testsuite>
 </testsuites>
